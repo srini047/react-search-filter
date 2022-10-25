@@ -8,8 +8,9 @@ const SearchBar = ({ templates, setSearchResults }) => {
 
     const resultsArray = templates.filter(
       (template) =>
-        template.title.includes(e.target.value) ||
-        template.body.includes(e.target.value)
+        template.notebook.includes(e.target.value) ||
+        template.tool.includes(e.target.value) ||
+        template.tags.includes(e.target.value)
     );
 
     setSearchResults(resultsArray);
